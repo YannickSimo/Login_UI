@@ -43,5 +43,12 @@ namespace Login
             LoginRegister log = new LoginRegister();
             log.Show();
         }
+
+        private void linkPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            PasswordUpdate upd = new PasswordUpdate();
+            upd.Show();
+        }
     }
 }
