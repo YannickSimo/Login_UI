@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace Login
 {
-    public partial class Product : Form
+    public partial class StocksTable : Form
     {
-        public Product()
+        public StocksTable()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;            
         }
     }
 }

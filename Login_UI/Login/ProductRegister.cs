@@ -106,5 +106,11 @@ namespace Login
             Product pro = new Product();
             pro.Show();
         }
+
+        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StocksTable stocker = new StocksTable();
+            stocker.Show();
+        }
     }
 }
