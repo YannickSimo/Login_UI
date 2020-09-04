@@ -7,11 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Login.Dashbord;
 
 namespace Login
 {
     public partial class Dashboard_Login : Form
     {
+        List<DashLogin> listeur = new List<DashLogin>()
+        {
+            new DashLogin("yannick", "yannick123"){},
+             new DashLogin("dann", "dann123"){},
+              new DashLogin("bill", "bill123"){}
+        };
+        
+        
+        
+
         public Dashboard_Login()
         {
             InitializeComponent();
@@ -25,8 +36,10 @@ namespace Login
         private void btnLogin_Click(object sender, EventArgs e)
         {
             this.Hide();
+
             ProductRegister propro = new ProductRegister();
             propro.Show();
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

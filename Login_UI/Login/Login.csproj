@@ -55,6 +55,7 @@
     <Compile Include="Dashboard_Login.Designer.cs">
       <DependentUpon>Dashboard_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dashbord\DashLogin.cs" />
     <Compile Include="LoginRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,5 +130,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
