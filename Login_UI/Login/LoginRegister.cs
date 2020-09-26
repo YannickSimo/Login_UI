@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,22 +20,30 @@ namespace Login
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            Dashboard_Login dsh = new Dashboard_Login();
+            dsh.Show();
         }
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {
-            bool test = true;
-            if(textBoxName.Text == @"value"  && textBoxVorname.Text != null && textBoxTelephone.Text != null &&
-                textBoxEmail.Text != null && textBoxPassword1.Text  == textBoxPassword2.Text )
+            try
             {
-                MessageBox.Show("registration complete");
+                SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=LoginDB;Integrated Security=True");
+
+                con.Open();
+                SqlCommand cmd = new SqlCommand(@"insert into Registration values ('" + textBoxName.Text + "', '" +textBoxVorname.Text+ "', '" + textBoxBirthdate.Text + "', '" 
+                                                + textBoxEmail.Text + "', '" + textBoxTelephone.Text + "', '" + textBoxPassword1.Text + "', '" + textBoxPassword2.Text + "')", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                throw;
             }
 
-            else
-            {
-                MessageBox.Show("Check the entry Again");
-            }
+            MessageBox.Show("registration complete");
         }
     }
 }

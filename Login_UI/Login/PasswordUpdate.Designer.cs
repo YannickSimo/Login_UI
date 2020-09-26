@@ -37,9 +37,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +80,7 @@
             this.BtnPasswordUpdate.Text = "Update";
             this.BtnPasswordUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnPasswordUpdate.UseVisualStyleBackColor = true;
+            this.BtnPasswordUpdate.Click += new System.EventHandler(this.BtnPasswordUpdate_Click);
             // 
             // textBoxPassUpdate3
             // 
@@ -146,6 +147,16 @@
             this.panel2.Size = new System.Drawing.Size(498, 33);
             this.panel2.TabIndex = 14;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(144, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Password Update";
+            // 
             // iconButton1
             // 
             this.iconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -180,16 +191,6 @@
             this.btnClose.Size = new System.Drawing.Size(26, 23);
             this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(144, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Password Update";
             // 
             // PasswordUpdate
             // 

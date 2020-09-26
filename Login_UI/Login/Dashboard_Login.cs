@@ -13,16 +13,7 @@ namespace Login
 {
     public partial class Dashboard_Login : Form
     {
-        List<DashLogin> listeur = new List<DashLogin>()
-        {
-            new DashLogin("yannick", "yannick123"){},
-             new DashLogin("dann", "dann123"){},
-              new DashLogin("bill", "bill123"){}
-        };
         
-        
-        
-
         public Dashboard_Login()
         {
             InitializeComponent();
